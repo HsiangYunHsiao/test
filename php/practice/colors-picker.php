@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--GitTest-->
+<!--GitTest123-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +24,7 @@
             <tr>
                 <?php
                 for ($i = 0; $i < 16; $i++) :
-                    $c = sprintf("#%X%X%X%X00", $i,$i,$k, $k);
+                    $c = sprintf("#%X%X%X%X00", $i, $i, $k, $k);
 
                 ?>
                     <td style="background-color: <?= $c ?>;" data-c="<?= $c ?>"></td>
@@ -35,23 +37,21 @@
         ?>
     </table>
 
-<div style="width: 150px; height: 50px; border: 1px solid gray;" id="myShow"></div>
+    <div style="width: 150px; height: 50px; border: 1px solid gray;" id="myShow"></div>
 
 
     <script>
         const myShow = document.querySelector('#myShow');
 
-        document.querySelector('table').addEventListener('click', event=>{
+        document.querySelector('table').addEventListener('click', event => {
             const t = event.target;
             console.log(t.tagName)
-            if(t.tagName==='TD'){
+            if (t.tagName === 'TD') {
                 const color = t.getAttribute('data-c')
                 myShow.style.backgroundColor = color;
                 myShow.innerHTML = color;
             }
         });
-
-
     </script>
 </body>
 
